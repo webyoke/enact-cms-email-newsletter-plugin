@@ -1,0 +1,20 @@
+{{ enact.view.title('Manage Email Campaigns') }}
+
+<div class='row collapse heading-con'>
+    <div class='small-12 medium-6 columns'>
+        <h1><span class='fi-book icon'></span>Campaigns</h1>
+    </div>
+    <div class='small-12 medium-6 columns text-right mobile-text-center'>
+        <a href='{{ cpSlug('email-newsletter/campaigns/create') }}' class='button'>New Campaign</a>
+    </div>
+</div>
+
+<div id="campaigns"></div>
+
+{{ enact.view.dataFeedAdapterResources() }}
+
+{{ pluginIncludeResource('EmailNewsletter','/js/jsx/Campaigns.js') }}
+
+{% script %}
+    React.render(React.createElement(Enact.react_class.Campaigns),document.getElementById("campaigns"));
+{% endscript %}

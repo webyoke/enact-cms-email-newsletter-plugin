@@ -1,0 +1,19 @@
+{
+    "name": "EmailNewsletter Enact CMS Plugin",
+    "description": "Collect email addresses for newsletters and send them curated emails.",
+    "license": "Apache License V2",
+    "authors": [
+        {
+            "name": "WebYoke.com",
+            "email": "support@webyoke.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+    },
+    "autoload": {
+        "classmap":[
+            "app/"
+        ]
+    }
+}

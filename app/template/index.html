@@ -1,0 +1,21 @@
+<div class='heading-con row text-center'>
+    <h1><span class='fi-book icon'></span>Email Newsletter</h1>
+</div>
+<div class='content-con'>
+    <div class='text-center row'>
+        <div class='small-12 medium-6 columns'>
+            <a href='{{ cpSlug('email-newsletter/subscriptions/') }}' class='en-link'>
+                Subscribers
+                <br>
+                {{ subscriberCount }}
+            </a>
+        </div>
+        <div class='small-12 medium-6 columns'>
+            <a href='{{ cpSlug('email-newsletter/campaigns/') }}' class='en-link'>
+                Campaigns
+                <br>
+                {{ campaignCount }}
+            </a>
+        </div>
+    </div>
+</div>

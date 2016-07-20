@@ -1,0 +1,13 @@
+{% if enact.session.hasFlash('email-newsletter-subscribe-success') %}
+    <div class='success'>{{ enact.session.getFlash('email-newsletter-subscribe-success') }}</div>
+{% else %}
+    <form method='post' action='/email-newsletter-subscribe'>
+        {{ enact.csrfFormInput }}
+        <input type='hidden' name='submit-uri' value='{{ enact.request.uri }}'/>
+        <input type='email' name='email' required placeholder='Enter your email address...'/>
+        <input type='submit' value='Subscribe'/>
+        {% if enact.session.hasFlash('email-newsletter-subscribe-error') %}
+            <div class='error'>{{ enact.session.getFlash('email-newsletter-subscribe-error') }}</div>
+        {% endif %}
+    </form>
+{% endif %}

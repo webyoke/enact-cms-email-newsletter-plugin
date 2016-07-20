@@ -1,0 +1,20 @@
+{{ enact.view.title('Manage Email Newsletter Subscriptions') }}
+
+<div class='row collapse heading-con'>
+    <div class='small-12 medium-6 columns'>
+        <h1><span class='fi-book icon'></span>Email Newsletter Subscriptions</h1>
+    </div>
+    <div class='small-12 medium-6 columns text-right mobile-text-center'>
+        <div id='export-button'></div>
+    </div>
+</div>
+
+<div id="subscriptions"></div>
+
+{{ enact.view.dataFeedAdapterResources() }}
+
+{{ pluginIncludeResource('EmailNewsletter','/js/jsx/EmailSubscriptions.js') }}
+
+{% script %}
+    React.render(React.createElement(Enact.react_class.EmailSubscriptions),document.getElementById("subscriptions"));
+{% endscript %}

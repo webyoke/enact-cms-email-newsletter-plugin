@@ -1,0 +1,9 @@
+<?php
+namespace EmailNewsletter\model;
+
+class {camelTable} extends \Enact\model\AbstractModel {
+
+    {model}
+
+
+}//{camelTable}

@@ -1,0 +1,10 @@
+<?php
+namespace EmailNewsletter\record;
+
+class {camelTable} extends \Disco\classes\Record {
+
+    protected $model = '\EmailNewsletter\model\{camelTable}';
+    
+    {record}
+
+}//{camelTable}
