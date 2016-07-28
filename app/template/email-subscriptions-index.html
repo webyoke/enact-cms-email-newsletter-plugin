@@ -14,5 +14,5 @@
 {{ pluginIncludeResource('EmailNewsletter','/js/jsx/EmailSubscriptions.js') }}
 
 {% script %}
-    React.render(React.createElement(Enact.react_class.EmailSubscriptions),document.getElementById("subscriptions"));
+    ReactDOM.render(React.createElement(Enact.react_class.EmailSubscriptions),document.getElementById("subscriptions"));
 {% endscript %}

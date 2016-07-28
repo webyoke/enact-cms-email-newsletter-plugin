@@ -21,7 +21,7 @@ Enact.react_class.EmailSubscriptions = React.createClass({displayName: "EmailSub
 
     componentMounted: function(){
 
-        React.render(
+        ReactDOM.render(
             React.createElement(Enact.react_class.ButtonWithLoad, {
                 text: "Export", 
                 title: "Export and download email subscriptions in CSV format", 

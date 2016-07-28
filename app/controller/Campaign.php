@@ -101,7 +101,7 @@ class Campaign {
 
         $templates = json_encode($templates);
 
-        \View::script('React.render(React.createElement(Enact.react_class.CreateCampaign, { templates : ' . $templates . ' } ),document.getElementById("create-campaign"));');
+        \View::script('ReactDOM.render(React.createElement(Enact.react_class.CreateCampaign, { templates : ' . $templates . ' } ),document.getElementById("create-campaign"));');
 
     }//getCreateCampaign
 
@@ -253,7 +253,7 @@ class Campaign {
 
         \View::html('<div id="campaign-stats"></div>');
         \View::script("
-                React.render(
+                ReactDOM.render(
                         React.createElement(Enact.react_class.CampaignStats, { campaign : {$campaign}, stats : {$stats} }), 
                         document.getElementById('campaign-stats')
                     );
